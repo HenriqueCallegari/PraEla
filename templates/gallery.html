@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="container gallery-section">
+
+  <h2>Galeria de memórias</h2>
+  <p class="lead">Alguns momentos especiais ❤️</p>
+
+  <div class="gallery-grid">
+
+    {% for img in images %}
+      <figure class="gallery-item reveal">
+        <img src="{{ url_for('static', filename=img) }}" alt="Memória {{ loop.index }}">
+        <figcaption>Memória {{ loop.index }}</figcaption>
+      </figure>
+    {% endfor %}
+
+    <!-- espaços extras para futuras fotos -->
+
+    <figure class="gallery-item reveal">
+      <img src="{{ url_for('static', filename='img/hero05.png') }}" alt="Memória 5">
+      <figcaption>Memória 5</figcaption>
+    </figure>
+
+    <figure class="gallery-item reveal">
+      <img src="{{ url_for('static', filename='img/hero06.jpeg') }}" alt="Memória 6">
+      <figcaption>Memória 6</figcaption>
+    </figure>
+
+    <figure class="gallery-item reveal">
+      <img src="{{ url_for('static', filename='img/hero07.png') }}" alt="Memória 7">
+      <figcaption>Memória 7</figcaption>
+    </figure>
+
+  </div>
+
+</section>
+{% endblock %}

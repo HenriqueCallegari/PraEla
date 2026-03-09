@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="container admin-section">
+  <h2>Painel de mensagens</h2>
+  <p class="small">Abaixo estão as mensagens enviadas pelo site. Você pode remover entradas indesejadas.</p>
+  <table class="messages-table">
+    <thead><tr><th>Id</th><th>Nome</th><th>E-mail</th><th>Mensagem</th><th>Data</th><th></th></tr></thead>
+    <tbody>
+      {% for m in messages %}
+        <tr>
+          <td>{{ m['id'] }}</td>
+          <td>{{ m['name'] }}</td>
+          <td>{{ m['email'] }}</td>
+          <td class="msg">{{ m['message'] }}</td>
+          <td>{{ m['created_at'] }}</td>
+          <td>
+            <form method="post" action="{{ url_for('admin_delete', id=m['id']) }}" onsubmit="return confirm('Remover esta mensagem?')">
+              <button class="btn btn-danger" type="submit">Remover</button>
+            </form>
+          </td>
+        </tr>
+      {% else %}
+        <tr><td colspan="6">Sem mensagens</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <p><a href="{{ url_for('admin_logout') }}">Sair</a></p>
+</section>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="hero container">
+  <div class="hero-left">
+    <h1 class="reveal">Para {{ name }}</h1>
+    <p class="lead reveal">Uma pequena lembrancinha para você, vuce ilumina minha vida 💫</p>
+    <div class="hero-ctas reveal">
+      <a class="btn btn-primary" href="{{ url_for('gallery') }}">Galeria de memórias</a>
+      <a class="btn btn-ghost" href="{{ url_for('contact') }}">Deixe uma mensagem</a>
+      <a class="btn btn-ghost" href="{{ url_for('letters') }}">Ler cartas 💌</a>
+    </div>
+  </div>
+  <div class="hero-right reveal">
+    <div class="card-glass">
+      <!-- focal portrait placeholder (SVG) -->
+      <img src="{{ url_for('static', filename='img/hero07.png') }}" alt="Ilustração">
+    </div>
+  </div>
+</section>
+
+<section class="features container">
+  <div class="feature reveal">
+    <h3>Memórias</h3>
+    <p>Nossos dias mais especiais minha princesa 👑</p>
+  </div>
+  <div class="feature reveal">
+    <h3>Cartas</h3>
+    <p>Mensagens que emocionam.</p>
+  </div>
+  <div class="feature reveal">
+    <h3>Planos</h3>
+    <p>Surpresas e um futuro para construir juntos.</p>
+  </div>
+</section>
+
+<section class="story container">
+  <h2 class="reveal">Meu site para você </h2>
+  <p class="reveal small">Tudo bem perfeito para você hihi</p>
+</section>
+{% endblock %}

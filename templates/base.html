@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Para {{ name }} — Dia da Mulher</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/ultra.css') }}">
+  <!-- GSAP for smooth, Framer Motion–like animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+  <!-- tsparticles for animated particles background -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.7.0/tsparticles.bundle.min.js"></script>
+</head>
+<body>
+  <div id="particles-js" aria-hidden></div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="{{ url_for('index') }}">
+        <div class="logo-mark" aria-hidden></div>
+        <span class="brand-text">Para {{ name }}</span>
+      </a>
+      <nav class="nav">
+        <a href="{{ url_for('index') }}">Início</a>
+        <a href="{{ url_for('about') }}">Sobre</a>
+        <a href="{{ url_for('gallery') }}">Galeria</a>
+        <a href="{{ url_for('contact') }}">Contato</a>
+        <a class="btn-admin" href="{{ url_for('admin_login') }}">Painel</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Feito com Muitao Amor ❤️ — </p>
+    </div>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/ultra.js') }}"></script>
+</body>
+</html>

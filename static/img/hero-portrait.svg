@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#ff6b88"/><stop offset="1" stop-color="#8e6bff"/></linearGradient>
+  </defs>
+  <rect width="100%" height="100%" rx="24" fill="url(#g)" opacity="0.12"/>
+  <g fill="#fff" opacity="0.95" transform="translate(60,40)">
+    <circle cx="180" cy="120" r="88" opacity="0.14"/>
+    <rect x="310" y="40" width="220" height="320" rx="18" fill="#fff" opacity="0.04"/>
+  </g>
+  <text x="50%" y="88%" font-size="22" fill="#fff" text-anchor="middle" opacity="0.9" font-family="Inter, Arial">Uma homenagem especial</text>
+</svg>

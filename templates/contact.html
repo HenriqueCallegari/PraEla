@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="container contact-section">
+  <h2>Deixe uma mensagem</h2>
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      {% for cat,msg in messages %}
+        <div class="flash {{ cat }}">{{ msg }}</div>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+  <form method="post" class="contact-form">
+    <label>Nome<input name="name" placeholder="Seu nome"></label>
+    <label>E-mail<input name="email" placeholder="Seu e-mail (opcional)"></label>
+    <label>Mensagem<textarea name="message" rows="6" placeholder="Escreva sua mensagem..."></textarea></label>
+    <div class="form-actions">
+      <button class="btn btn-primary" type="submit">Enviar</button>
+    </div>
+  </form>
+</section>
+{% endblock %}

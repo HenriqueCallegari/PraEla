@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420">
+  <defs><linearGradient id="g2" x1="0" x2="1"><stop offset="0" stop-color="#ff6b88"/><stop offset="1" stop-color="#8e6bff"/></linearGradient></defs>
+  <rect width="100%" height="100%" fill="url(#g2)"/>
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="30" fill="#fff">Memória 2</text>
+</svg>
